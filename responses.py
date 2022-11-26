@@ -17,3 +17,5 @@ Qatar event is available at https://qatar.distant.finance
         return "Twitter -> twitter.com/distant_finance"
     if user_message in ("medium?", "medium", "blog?"):
         return "Medium -> medium.com/@distant_finance"
+    if user_message in ("airdrop?", "airdrop"):
+        return "Airdrop details is available at https://link.medium.com/oEcZ0vrNgvb"
