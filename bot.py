@@ -20,12 +20,16 @@ def commands(update, context):
 contract? - get our contract addresses
 website? - get available sites links
 socials? - get twitter handles
+airdrop? - get airdrop info
     """)
     
 def docs(update, context):
     update.message.reply_text("Check our docs at docs.distant.finance")
 
 def contact(update, context):
+    update.message.reply_text("Send us an email at business@distant.finance")
+
+def business(update, context):
     update.message.reply_text("Send us an email at business@distant.finance")
 
 def support(update, context):
@@ -53,6 +57,7 @@ def main():
     disp.add_handler(CommandHandler("commands", commands))
     disp.add_handler(CommandHandler("docs", docs))
     disp.add_handler(CommandHandler("contact", contact))
+    disp.add_handler(CommandHandler("business", business))
     disp.add_handler(CommandHandler("support", support))
     disp.add_handler(MessageHandler(Filters.text, handle_message))  
     disp.add_handler(MessageHandler(Filters.command, unknown))  # Filters out unknown commands
